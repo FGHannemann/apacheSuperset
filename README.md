@@ -20,7 +20,7 @@ sudo yum install gcc gcc-c++ libffi-devel python-devel python-pip openssl-devel 
 * Creating a user to run Superset
 
 ```
-adduser superset
+useradd superset
 ```
 
 
@@ -28,7 +28,7 @@ adduser superset
 
 ```
 sudo mkdir /app
-sudo chown -R [user] /app
+sudo chown -R superset /app
 cd /app
 ```
 
