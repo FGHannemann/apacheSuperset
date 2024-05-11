@@ -29,7 +29,6 @@ useradd superset
 ```
 sudo mkdir /app
 sudo chown -R superset /app
-cd /app
 ```
 
 
@@ -43,6 +42,7 @@ su - superset
 * Create python environment 
 
 ```
+cd /app
 mkdir superset
 cd superset
 python3 -m venv superset_env
