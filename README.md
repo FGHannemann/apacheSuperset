@@ -63,7 +63,7 @@ pip install gevent
 * Create superset config file
 
 ```
-touch superset_config.py
+nano superset_config.py
 ```
 
 
@@ -99,7 +99,7 @@ MAPBOX_API_KEY = ''
 ```
 
 
-* You must replac YOUR_OWN_RANDOM_GENERATED_SECRET_KEY in above file with the code returned by following command
+* You must replace YOUR_OWN_RANDOM_GENERATED_SECRET_KEY in the above file with the code returned by following the command
 
 ```
 openssl rand -base64 42
@@ -113,7 +113,7 @@ export SUPERSET_CONFIG_PATH=/app/superset/superset_config.py
 ```
 
 
-* Once Done let us inititlize database with following commands 
+* Once Done let us initialize the database with the following commands 
 
 ```
 # Create an admin user in your metadata database (use `admin` as username to be able to load the examples)
@@ -132,14 +132,14 @@ superset init
 ```
 
 
-* Now the environment is ready, lets try running it.
-To run superset I have created a sh script that you can run in order to run the server. To create create script using following command.
+* Now the environment is ready, let's try running it.
+To run superset I have created a sh script that you can run in order to run the server. To create a script use the following command.
 
 ```
 nano run_superset.sh
 ```
 
-and paste following code in it.
+* Paste following code in it.
 
 ```
 #!/bin/bash
@@ -156,6 +156,7 @@ gunicorn \
 ```
 
 * In order to run it we need to grant it run permission. To do that lets run following command.
+
 ```
 chmod +x run_superset.sh
 ```
@@ -189,7 +190,6 @@ WorkingDirectory = /app/superset
 limit-re>
 ExecStart = /app/superset/run_superset.sh
 ExecStop = /bin/kill -s TERM $MAINPID
-
 
 [Install]
 WantedBy=multi-user.target
